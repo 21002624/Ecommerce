@@ -1,0 +1,52 @@
+/* Header.css */
+*{
+    color: black;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.logo {
+  display: flex;
+  gap: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.logoImg{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.account-address{
+  width: 2 0%;
+}
+
+.searchbar-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: black; /* Text color */
+  background-color: white; /* Background color */
+  border: 2px solid black; /* Optional black border */
+  font-weight: bold; /* Bold text */
+  outline: none; /* Remove default focus outline */
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+.searchbar-input::placeholder {
+  color: grey; /* Placeholder color (optional) */
+  font-weight: bold; /* Bold placeholder */
+}

@@ -1,0 +1,11 @@
+.cloth{
+    display: flex;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+.box{
+    width: 20%;
+    height: 40vh;
+    background-color: aqua;
+    border-radius: 10px;
+}

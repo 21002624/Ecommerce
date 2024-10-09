@@ -1,0 +1,8 @@
+.FooterBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    margin-top: .5rem;
+    border-radius: 10px
+}
