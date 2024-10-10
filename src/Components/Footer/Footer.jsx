@@ -12,10 +12,10 @@ const Footer = () => {
         <h2>Get to Know Us</h2>
           <ul>
             <li>
-              <a>akksks</a>
+              <a>Get to Know Us About</a>
             </li>
             <li>
-              <a>akksks</a>
+              <a>Careers</a>
             </li>
             <li>
               <a>akksks</a>

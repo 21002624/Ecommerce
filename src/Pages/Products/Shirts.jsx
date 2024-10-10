@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import './Products.css';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Products = () => {
   const [products,setProducts]=useState([]);
@@ -19,7 +20,7 @@ const Products = () => {
   }, []);
 
   if(loading){
-    return <div> loading</div>
+    return <div className='loading'> <CircularProgress /></div>
   }
 
   return (

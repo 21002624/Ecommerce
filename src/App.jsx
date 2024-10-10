@@ -8,8 +8,7 @@ import Footer from './Components/Footer/Footer';
 import FooterTop from './Components/Footer/FooterTop';
 import FooterBottom from './Components/Footer/FooterBottom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Cart from './Pages/Cart/Cart';
-import UserAccount from './Pages/UserAccount/UserAccount';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import Products from './Pages/Products/Products';
 import Beauty from './Pages/Products/Beauty';
 import Fragurance from './Pages/Products/Fragurances';
@@ -17,6 +16,9 @@ import Furnitures from './Pages/Products/Furnitures';
 import Laptop from './Pages/Products/Laptops';
 import Shirts from './Pages/Products/Shirts';
 import Shoes from './Pages/Products/Shoes';
+import SignIn from './Pages/Account/SignIn';
+import LogIn from './Pages/Account/LogIn';
+import Cart from './Pages/Cart/Cart';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,8 +41,9 @@ function App() {
               </>
             } 
           />
-          <Route path='/cart' element={<Cart />} /> 
-          <Route path='/user-account' element={<UserAccount />} />
+          <Route path='/ProductDetails/:id' element={<ProductDetails />} /> 
+          <Route path='/signin' element={<SignIn/>} />
+          <Route path='/login' element={<LogIn/>} />
           <Route path='/products' element={<Products />} />
           <Route path='/fragurances' element={<Fragurance />} />
           <Route path='/beauty' element={<Beauty />} />
@@ -48,13 +51,14 @@ function App() {
           <Route path='/shoes' element={<Shoes />} />
           <Route path='/laptop' element={<Laptop />} />
           <Route path='/furnitures' element={<Furnitures />} />
+          <Route path='/cart' element={<Cart />} />
 
           
         </Routes>
       </div>
 
       <div className='part3'>
-        <FooterTop />
+        {/* <FooterTop /> */}
         <Footer />
         <FooterBottom />
       </div>

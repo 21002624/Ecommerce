@@ -1,0 +1,52 @@
+.LogInBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
+}
+.LogIn{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.userImg{
+    width: 40%;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.LogInLeft{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.LogInRight{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.LogInFild{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#userPasswordInput,#userIdInput{
+    width: 100%;
+}
+.ButtonFiled{
+    display: flex;
+    gap: 1rem;
+    margin-top: 5%;
+}

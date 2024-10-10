@@ -1,21 +1,24 @@
 import React from 'react'
 import './FooterTop.css';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const FooterTop = () => {
   return (
     <div className='FooterTop'>
       <div className='FooterTop1'>
-        <p>See personalized recommendations</p>
-        <button>Sign in</button>
+        <div className='FooterSignInDiv'>
+          <p>See personalized recommendations</p>
+          <Link to="/login"><Button className='FooterTopButton' variant="contained">Login</Button> </Link> 
+          
+        </div>
+        
         <div className='NewCus'>
             <p>New Customer ?</p>
-            <button>Start here</button>
+            <Button className='FooterTopButton' variant="contained" color="success">Sign in</Button>
         </div>
       </div>
 
-      <div className='FooterTop2'>
-        <button>Back to top</button>
-      </div>
     </div>
   )
 }

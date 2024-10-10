@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css';
+import CircularProgress from '@mui/material/CircularProgress';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [products,setproducts]=useState([]);
@@ -19,7 +21,7 @@ const Products = () => {
   },[]);
 
   if(loading){
-    return <div> loading</div>
+    return <div className='loading'> <CircularProgress /></div>
   }
 
   return (

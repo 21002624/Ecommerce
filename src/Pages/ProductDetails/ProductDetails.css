@@ -1,0 +1,14 @@
+.ProductDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ProductDetailsLeft, .ProductDetailsRight{
+    width: 40%;
+}
+.quantity-controls{
+    width: 20%;
+    display: flex;
+    gap: .5rem;
+    margin-top: .5rem;
+}

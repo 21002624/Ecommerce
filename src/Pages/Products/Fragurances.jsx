@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import './Products.css';
+import CircularProgress from '@mui/material/CircularProgress';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [products,setProducts]=useState([]);
@@ -19,7 +21,7 @@ const Products = () => {
   }, []);
 
   if(loading){
-    return <div> loading</div>
+    return <div className='loading'> <CircularProgress /></div>
   }
 
   return (
@@ -27,12 +29,15 @@ const Products = () => {
       <h1>Products</h1>
       <div className='grid'>
           {products.map((product) => (
-              <div className='productBox'  key={product.id}>
-                <img src={product.thumbnail} alt={product.title} />
-                <h3>{product.title}</h3>
-                {/* <p>{product.description}</p> */}
-                <p>Price: ${product.price}</p>
-              </div>
+            <Link to={`/ProductDetails/${product.id}`} key={product.id}>
+            <div className='productBox'>
+                  <img src={product.thumbnail} alt={product.title} />
+                  <h3>{product.title}</h3>
+                  <p>{product.id}</p>
+                  <p>Price: ${product.price}</p>
+            </div>
+            </Link>
+              
             ))}
       </div>
       

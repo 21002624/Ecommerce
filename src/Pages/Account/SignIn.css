@@ -1,0 +1,14 @@
+.SignInBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.SignInField{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5%;
+    gap: .5rem;
+}
