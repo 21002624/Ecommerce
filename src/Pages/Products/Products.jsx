@@ -28,13 +28,16 @@ const Products = () => {
     <div className='productGrid'>
       <h1>Products</h1>
       <div className='grid'>
-          {products.map((product) => (
-              <div className='productBox'  key={product.id}>
-                <img src={product.thumbnail} alt={product.title} />
-                <h3>{product.title}</h3>
-                {/* <p>{product.description}</p> */}
-                <p>Price: ${product.price}</p>
-              </div>
+      {products.map((product) => (
+            <Link to={`/ProductDetails/${product.id}`} key={product.id}>
+            <div className='productBox'>
+                  <img src={product.thumbnail} alt={product.title} />
+                  <h3>{product.title}</h3>
+                  <p>{product.id}</p>
+                  <p>Price: ${product.price}</p>
+            </div>
+            </Link>
+              
             ))}
       </div>
       

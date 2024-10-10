@@ -5,6 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import './ProductDetails.css';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { Button } from '@mui/material';
 
 const ProductDetails = () => {
   const params = useParams();
@@ -12,6 +13,7 @@ const ProductDetails = () => {
 
   const [product,SetProduct]=useState('');
   const [loading,setLoading]=useState(true);
+  const [buttonMsg,SetButtonMsg]=useState('Add to cart');
 
   useEffect(()=>{
     axios.get(`https://dummyjson.com/products/${id}`)
@@ -27,6 +29,14 @@ const ProductDetails = () => {
 
   if(loading){
     return <div className='loading'> <CircularProgress /></div>
+  }
+
+  const AddToCartFunction=()=>{
+    console.log("added");
+    SetButtonMsg('Added to Cart')
+    setTimeout(() => {
+      SetButtonMsg('Add to cart');
+    }, 2000);
   }
 
   return (
@@ -57,6 +67,12 @@ const ProductDetails = () => {
                 <button >
                   <AddIcon />
                 </button>
+              </div>
+
+              <div className='addToCartDiv'>
+                  <Button onClick={AddToCartFunction} variant="contained" color="success">
+                    {buttonMsg}
+                  </Button>
               </div>
                 
             </div>

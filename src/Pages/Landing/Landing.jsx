@@ -19,7 +19,10 @@ const Landing = () => {
       </div>
 
       <div className='ProductList'>
-        <ProductList />
+        <ProductList cat="groceries" />
+        <ProductList cat="motorcycle" />
+        <ProductList cat="sunglasses" />
+        <ProductList cat="womens-bags" />
       </div>
     
     </div>

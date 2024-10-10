@@ -18,8 +18,8 @@ const SubHeader = () => {
   return (
     <header>        
         <nav className="nav-links">
-         <a> <FaBars/></a>
-         <Link>All</Link>
+         {/* <a> <FaBars/></a> */}
+         {/* <Link>All</Link> */}
          <Link to="/products">
           <img className='listImg' src={phone} />
          </Link>
