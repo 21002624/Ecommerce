@@ -6,12 +6,14 @@ import './ProductDetails.css';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Button } from '@mui/material';
+import ProductList from '../Landing/ProductList';
 
 const ProductDetails = () => {
   const params = useParams();
   const id=params.id;
 
-  const [product,SetProduct]=useState('');
+  const [product,SetProduct]=useState(0);
+  const [count,setCount]=useState(1);
   const [loading,setLoading]=useState(true);
   const [buttonMsg,SetButtonMsg]=useState('Add to cart');
 
@@ -33,10 +35,14 @@ const ProductDetails = () => {
 
   const AddToCartFunction=()=>{
     console.log("added");
+    console.log(count);
+    setCount(count+1);
     SetButtonMsg('Added to Cart')
-    setTimeout(() => {
-      SetButtonMsg('Add to cart');
-    }, 2000);
+    
+
+    // setTimeout(() => {
+    //   SetButtonMsg('Add to cart');
+    // }, 2000);
   }
 
   return (
@@ -85,6 +91,10 @@ const ProductDetails = () => {
         :
           <p>Product not found.</p>
       }
+        <div className='ProductList'>
+          <ProductList cat="groceries" />
+      </div>
+      
     </div>
   )
 }

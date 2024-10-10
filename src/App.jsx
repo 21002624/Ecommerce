@@ -19,6 +19,7 @@ import Shoes from './Pages/Products/Shoes';
 import SignIn from './Pages/Account/SignIn';
 import LogIn from './Pages/Account/LogIn';
 import Cart from './Pages/Cart/Cart';
+import Search from './Pages/Search/Search';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -52,6 +53,8 @@ function App() {
           <Route path='/laptop' element={<Laptop />} />
           <Route path='/furnitures' element={<Furnitures />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/search' element={<Search/>} />
+
 
           
         </Routes>

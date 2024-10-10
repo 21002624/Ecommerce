@@ -1,0 +1,44 @@
+/* Search.css */
+
+.SearchContainer {
+    padding: 20px;
+}
+
+.searchResult {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+.searchResultList {
+/* Adjust width to fit 3 items per row */
+    margin-bottom: 20px; /* Space between rows */
+    border: 1px solid #ddd; /* Optional: border for items */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: padding inside each item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    text-align: center; /* Center text inside items */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.searchResultList img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.searchResultList:hover {
+    transform: scale(1.05); /* Slightly enlarge item on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .searchResultList {
+        width: calc(50% - 10px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .searchResultList {
+        width: 100%; /* One item per row on small screens */
+    }
+}
