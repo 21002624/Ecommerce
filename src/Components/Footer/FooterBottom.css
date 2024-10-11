@@ -5,3 +5,13 @@
     margin-top: .5rem;
     border-radius: 10px;
 }
+/* Mobile View */
+@media (max-width: 768px) {
+    .FooterBottom{
+        display: flex;
+    }
+    .FooterBottom p{
+        margin: 1rem;
+    }
+    
+}

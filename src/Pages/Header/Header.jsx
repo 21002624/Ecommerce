@@ -24,39 +24,42 @@ const Header = () => {
 
 
   return (
-    <header className="header">
-        <div className="logo">
-          <div className='logo-icon'>
-          <Link to="/"><img className='logoImg' src={logo}/></Link>
-          
-          </div>
-          <div className='account-address'>
-             <p>Chennai</p> 
-          </div>
-          
-        </div>
+    <div className='headerDiv'>
+              <header className="header">
+              <div className="logo">
+                <div className='logo-icon'>
+                <Link to="/"><img className='logoImg' src={logo}/></Link>
+                
+                </div>
+                <div className='account-address'>
+                  <p>Chennai</p> 
+                </div>
+                
+              </div>
 
-        <div className="search-bar">
-        <TextField 
-        className='searchBar'
-          id="searchItem"
-          label="Search field"
-          type="search"
-          variant="filled"
-        />
-          {/* <Link to='/search'></Link> */}
-          <button onClick={SearchItem} className='SearchButton'><FaSearch /></button>
-        
-        </div>
-        
-        <nav className="nav-links">
-            <Link to='/cart'> <FaShoppingCart /></Link>
-            <Link to="/login"><FaUserAlt /> </Link>      
-            <Link to="/cart"><FaBox /> </Link>
-        </nav>
-        
-        
-    </header>
+              <div className="search-bar">
+              <TextField 
+              className='searchBar'
+                id="searchItem"
+                label="Search field"
+                type="search"
+                variant="filled" 
+              />
+                <button onClick={SearchItem} className='SearchButton'><FaSearch /></button>
+              
+              </div>
+              
+              <nav className="nav-links">
+                  <Link to='/cart'> <FaShoppingCart /></Link>
+                  <Link to="/login"><FaUserAlt /> </Link>      
+                  <Link to="/cart"><FaBox /> </Link>
+              </nav>
+              
+              
+          </header>
+
+    </div>
+    
   )
 }
 

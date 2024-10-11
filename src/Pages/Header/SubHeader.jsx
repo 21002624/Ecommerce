@@ -2,11 +2,6 @@ import React from 'react'
 import './SubHeader.css';
 import { BrowserRouter, Link,Router,Routes } from 'react-router-dom';
 import {FaBars } from 'react-icons/fa';
-import ball from './img/ball.webp';
-import can from './img/can.webp';
-import earphone from './img/earphone.webp';
-import eyecar from './img/eyecar.webp';
-import watch from './img/watch.webp';
 import beauty from './img/beauty.jpg';
 import fragurances from './img/fragurances.webp';
 import laptop from './img/laptop.jpg';
@@ -16,7 +11,7 @@ import phone from './img/phone.webp';
 import furnitures from './img/furnitures.webp';
 const SubHeader = () => {
   return (
-    <header>        
+    <header className='header'>        
         <nav className="nav-links">
          {/* <a> <FaBars/></a> */}
          {/* <Link>All</Link> */}

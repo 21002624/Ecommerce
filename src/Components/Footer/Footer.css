@@ -2,9 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 40vh;
     margin-top: .5rem;
     border-radius: 10px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.socialLinks{
+    margin-top: .5rem;
 }
 
     .socialLinks a {
@@ -12,4 +16,18 @@
         margin-right: 10px; 
         color: #000; 
       }
-      
+
+      /* Mobile View */
+@media (max-width: 768px) {
+    .Footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .Foot1{
+        width: 80%;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+    }
+    
+  }
