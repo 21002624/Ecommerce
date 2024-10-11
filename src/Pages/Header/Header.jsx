@@ -3,24 +3,12 @@ import './Header.css';
 import { BrowserRouter, Link,Router,Routes } from 'react-router-dom';
 import { FaShoppingCart, FaUserAlt, FaBox,FaSearch } from 'react-icons/fa';
 import { TextField } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import logo from './img/logo.png';
 
 
-const Header = () => {
+const Header = ({ SearchItem }) => {
 
-  const [searchItem,setSearchItem]=useState('');
-  const navigate = useNavigate();
 
-  const SearchItem=()=>{
-    const item=document.getElementById('searchItem').value;
-    if (!item) {
-      return; 
-  }
-    console.log(item);
-    setSearchItem(item);
-    navigate('/search', { state: { searchItem: item } });
-  };
 
 
   return (
