@@ -8,7 +8,7 @@ import ProductList from './ProductList';
 const Landing = () => {
   return (
 
-    <div className='Landing'>
+    <div className='Landing'> 
       <div>
         <OfferTitle />
       </div>

@@ -8,7 +8,7 @@
     border-radius: 10px;
     width: 100%;          
     overflow: hidden;    
-    position: relative;
+    position: relative; 
 }
 .Landing{
     border-radius: 5px;
@@ -33,6 +33,7 @@
 .Part-1{
     display: flex;
     gap: .5rem;
+    margin: .5rem;
 }
 
 .List{
