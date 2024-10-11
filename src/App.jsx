@@ -19,7 +19,6 @@ import SignIn from './Pages/Account/SignIn';
 import LogIn from './Pages/Account/LogIn';
 import Cart from './Pages/Cart/Cart';
 import Search from './Pages/Search/Search';
-import Nav from './Pages/Nav/Nav';
 
 // This is a functional component now wrapped inside Router context
 function AppContent() {
@@ -41,7 +40,6 @@ function AppContent() {
       <div className="part1">
         <Header SearchItem={SearchItem} />
         <SubHeader />
-        <Nav SearchItem={SearchItem}/>
       </div>
 
       <div className="part2">

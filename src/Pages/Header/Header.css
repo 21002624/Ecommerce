@@ -46,17 +46,32 @@
   
 }
 .SearchButton{
+  font-size: large;
   border: none;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+  width:3rem;
+  height: 3rem;
+  border-radius: 10%;
   background-color: rgb(255, 255, 255);
 }
-
-/* Mobile View */
 @media (max-width: 768px) {
-  .header {
+  .account-address{
     display: none;
+  }
+  .nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-bar{
+    gap: .5rem;
+  }
+  .TextField{
+    max-width: 80%;
+    height: 10%;
+  }
+  .header{
+    margin: 0;
+    padding: 2%;
   }
   
 }

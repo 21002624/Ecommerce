@@ -7,12 +7,7 @@ import logo from './img/logo.png';
 
 
 const Header = ({ SearchItem }) => {
-
-
-
-
   return (
-    <div className='headerDiv'>
               <header className="header">
               <div className="logo">
                 <div className='logo-icon'>
@@ -39,14 +34,13 @@ const Header = ({ SearchItem }) => {
               
               <nav className="nav-links">
                   <Link to='/cart'> <FaShoppingCart /></Link>
-                  <Link to="/login"><FaUserAlt /> </Link>      
-                  <Link to="/cart"><FaBox /> </Link>
+                  <Link to="/login"><FaUserAlt /> </Link>       
               </nav>
               
               
           </header>
 
-    </div>
+
     
   )
 }

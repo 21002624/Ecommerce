@@ -11,8 +11,8 @@ import phone from './img/phone.webp';
 import furnitures from './img/furnitures.webp';
 const SubHeader = () => {
   return (
-    <header className='header'>        
-        <nav className="nav-links">
+    <header className='SubHeader'>        
+        <nav className="navlinks">
          {/* <a> <FaBars/></a> */}
          {/* <Link>All</Link> */}
          <Link to="/products">
