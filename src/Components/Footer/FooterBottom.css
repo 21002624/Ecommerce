@@ -10,7 +10,7 @@
     .FooterBottom{
         display: flex;
     }
-    .FooterBottom p{
+    .footP{
         margin: 1rem;
     }
     

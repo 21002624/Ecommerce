@@ -12,18 +12,18 @@ const Footer = () => {
       <div className='Foot1'>
         <h2>Get to Know Us</h2>
           <div>
-            <p>about Ecom</p>
-            <p>Global Brand</p>
-            <p>merchants</p>
+            <p className='footP'>about Ecom</p>
+            <p className='footP'>Global Brand</p>
+            <p className='footP'>merchants</p>
           </div>
       </div>
 
       <div className='Foot1'>
         <h2>Let Us Help You</h2>
         <div>
-          <p>Your Account</p>
-          <p>Returns Centre</p>
-          <p>Help</p>
+          <p className='footP'>Your Account</p>
+          <p className='footP'>Returns Centre</p>
+          <p className='footP'>Help</p>
         </div>
           
       </div>
