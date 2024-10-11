@@ -1,7 +1,7 @@
 /* Search.css */
 
 .SearchContainer {
-    margin: .5rem;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,9 +10,9 @@
 }
 
 .searchResult {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-between; /* Distribute space between items */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
     gap: .5rem;
 }
 
@@ -46,5 +46,8 @@
 @media (max-width: 480px) {
     .searchResultList {
         width: 90%; /* One item per row on small screens */
+    }
+    .searchResult{
+        
     }
 }
