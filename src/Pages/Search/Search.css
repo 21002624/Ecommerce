@@ -1,13 +1,19 @@
 /* Search.css */
 
 .SearchContainer {
-    padding: 20px;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .searchResult {
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Distribute space between items */
+    gap: .5rem;
 }
 
 .searchResultList {
@@ -39,6 +45,6 @@
 
 @media (max-width: 480px) {
     .searchResultList {
-        width: 100%; /* One item per row on small screens */
+        width: 90%; /* One item per row on small screens */
     }
 }
