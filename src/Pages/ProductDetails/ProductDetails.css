@@ -15,3 +15,18 @@
 .addToCartDiv{
     margin-top: .5rem;
 }
+
+@media (max-width: 768px) {
+    .ProductDetails{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .ProductDetails div{
+        width: 80%;
+    }
+    p{
+        margin: 0;
+    }
+    
+  }
