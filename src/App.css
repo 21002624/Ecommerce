@@ -15,3 +15,10 @@
     background-color: antiquewhite;
     padding-top: 1rem;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .part1{
+        margin: .5rem;
+    }
+  }

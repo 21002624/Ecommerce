@@ -9,9 +9,11 @@
 @media (max-width: 768px) {
     .FooterBottom{
         display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: .5rem;
+        padding-bottom: 1rem;
     }
-    .footP{
-        margin: 1rem;
-    }
+
     
 }

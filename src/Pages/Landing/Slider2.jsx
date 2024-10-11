@@ -7,7 +7,7 @@ const Slider2 = () => {
   return (
     <div className="Slider2">
       <div className="Slidertitle">
-        <h1>Iphone</h1>
+        <h2>Iphone</h2>
         <img className='iphone' src={iphone} />
       </div>
 

@@ -16,7 +16,7 @@ const SignIn = () => {
             label="firstName"
           />
           <TextField
-            required
+            required 
             className='SignInBtn'
             id="lastName"
             label="Lastname"
@@ -64,7 +64,10 @@ const SignIn = () => {
             label="Country"
           />
         </div>
-        <Link to='/signin'><Button variant="contained">Sign in</Button></Link>
+        <div className='Signbtn'>
+          <Link to='/signin'><Button variant="contained">Sign in</Button></Link>
+        </div>
+        
       </div>
 
   )

@@ -50,3 +50,14 @@
     gap: 1rem;
     margin-top: 5%;
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .LogInBox{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .LogInLeft,.LogInRight{
+        width: 100%;
+    }
+}
