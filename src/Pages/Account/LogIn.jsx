@@ -6,7 +6,7 @@ import {Button} from '@mui/material';
 import { Link } from 'react-router-dom';
 const LogIn = () => {
   return (
-    <div className='LogIn'>
+    <div className='LogIn'> 
         <h1>User Profile</h1> 
         <div className='LogInBox'>
             <div className='LogInLeft'>
