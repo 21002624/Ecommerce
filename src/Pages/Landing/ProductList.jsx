@@ -30,7 +30,7 @@ const ProductList = (props) => {
                   <img src={product.thumbnail} alt={product.title} />
                   <h3>{product.title}</h3>
                   <p>{product.id}</p>
-                  <p>Price: ${product.price}</p>
+                  <p>Price: $ {product.price}</p>
             </div>
             </Link>
               
