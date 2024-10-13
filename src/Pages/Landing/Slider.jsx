@@ -18,7 +18,7 @@ const Slider = () => {
   return (
     <div className='Slider'>
       <div className='Slidertitle'>
-          <h2>Title</h2>
+          <h1>Title</h1>
       </div>
 
       <div className='SliderContent'>

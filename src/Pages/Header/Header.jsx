@@ -4,6 +4,7 @@ import { BrowserRouter, Link,Router,Routes } from 'react-router-dom';
 import { FaShoppingCart, FaUserAlt, FaBox,FaSearch } from 'react-icons/fa';
 import { TextField } from '@mui/material';
 import logo from './img/logo.png';
+import lo from './img/lo.png'
 
 
 const Header = ({ SearchItem }) => {
@@ -11,11 +12,11 @@ const Header = ({ SearchItem }) => {
               <header className="header">
               <div className="logo">
                 <div className='logo-icon'>
-                <Link to="/"><img className='logoImg' src={logo}/></Link>
+                <Link to="/"><img className='logoImg' src={lo}/></Link>
                 
                 </div>
                 <div className='account-address'>
-                  <p>Chennai</p> 
+                  <h2>Chennai</h2> 
                 </div>
                 
               </div>
@@ -33,7 +34,7 @@ const Header = ({ SearchItem }) => {
               </div>
               
               <nav className="nav-links">
-                  <Link to='/cart'><div><FaShoppingCart /> <p>Cart</p></div></Link>
+                  <Link to='/cart'><div><FaShoppingCart /><p> Cart</p></div></Link>
                   <Link to="/login"><div><FaUserAlt /><p> Login</p></div></Link>       
               </nav>
               

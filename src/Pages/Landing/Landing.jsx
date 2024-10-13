@@ -19,9 +19,13 @@ const Landing = () => {
       </div>
 
       <div className='ProductList'>
+        <h1>Groceries</h1>
         <ProductList cat="groceries" />
+        <h1>Motorcycle</h1>
         <ProductList cat="motorcycle" />
+        <h1>Sunglasses</h1>
         <ProductList cat="sunglasses" />
+        <h1>Bags</h1>
         <ProductList cat="womens-bags" />
       </div>
     

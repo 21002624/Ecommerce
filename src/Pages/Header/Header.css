@@ -29,6 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: .5rem;
 }
 .nav-links{
   display: flex;
@@ -37,7 +38,7 @@
 }
 
 .logoImg{
-  width: 50px;
+  width: 80px;
   border-radius: 50%;
 }
 
