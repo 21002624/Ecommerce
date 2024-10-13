@@ -73,6 +73,9 @@
   .nav-links p{
     display: none;
   }
+  .logoImg{
+    width: 60px;
+  }
   .account-address{
     display: none;
   }
