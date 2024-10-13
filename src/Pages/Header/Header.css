@@ -22,6 +22,13 @@
   margin: 0 15px;
   text-decoration: none;
   font-size: 18px;
+  display: flex;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoImg{
@@ -54,6 +61,12 @@
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
+  *{
+    font-size: small;
+  }
+  .nav-links p{
+    display: none;
+  }
   .account-address{
     display: none;
   }

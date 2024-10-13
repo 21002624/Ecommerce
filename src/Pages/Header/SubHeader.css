@@ -15,7 +15,25 @@ a{
     align-items: center;
     justify-content: center;
     height: 90px;
+    gap: 3rem;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff789; /* Blue background */
+    color: rgb(0, 0, 0); /* Text color */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    width: 100%;
+}
+
+.button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Black shadow on hover */
+}
+
 
 @media (max-width: 768px) {
     .navlinks{

@@ -10,7 +10,7 @@ import ProductList from '../Landing/ProductList';
 
 const ProductDetails = () => {
   const params = useParams();
-  const id=params.id;
+  const id=params.id; 
 
   const [product,SetProduct]=useState(0);
   const [count,setCount]=useState(1);
@@ -38,11 +38,9 @@ const ProductDetails = () => {
     console.log(count);
     setCount(count+1);
     SetButtonMsg('Added to Cart')
-    
-
-    // setTimeout(() => {
-    //   SetButtonMsg('Add to cart');
-    // }, 2000);
+    setTimeout(() => {
+      SetButtonMsg('Add to cart');
+    }, 2000);
   }
 
   return (
@@ -56,13 +54,9 @@ const ProductDetails = () => {
 
             <div className='ProductDetailsRight'>
               <p>Product Name : {product.title} </p>
-                <br/>
               <p>Price : {product.price}</p>
-                <br/>
               <p>Rating : {product.rating}</p>
-                <br/>
               <p>Discription : {product.description}</p>
-                <br/>
               <p>Return Policy : {product.returnPolicy}</p>
 
               <div className='quantity-controls'>

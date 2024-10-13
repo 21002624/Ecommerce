@@ -16,25 +16,25 @@ const SubHeader = () => {
          {/* <a> <FaBars/></a> */}
          {/* <Link>All</Link> */}
          <Link to="/products">
-          <img className='listImg' src={phone} />
+            <div class="button">Mobile</div>
          </Link>
          <Link to="/beauty">
-         <img className='listImg' src={beauty} />
+            <div class="button">Beauty</div>
          </Link>
          <Link to="/fragurances">
-         <img className='listImg' src={fragurances} />
+            <div class="button">fragurences</div>
          </Link>
          <Link to="/laptop">
-         <img className='listImg' src={laptop} />
+            <div class="button">laptops</div>
          </Link>
          <Link to="/shirts">
-            <img className='listImg' src={shirts} />
+            <div class="button">shirts</div>
          </Link>
          <Link to="/shoes">
-            <img className='listImg' src={shoes} />
+            <div class="button">shoes</div>
          </Link>
          <Link to="/furnitures">
-            <img className='listImg' src={furnitures} />
+            <div class="button">furnitures</div>
          </Link>
         </nav>
     </header>

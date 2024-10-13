@@ -39,7 +39,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 80vh; 
+}
+
+.productBox:hover {
+  transform: scale(1.05); 
 }
 
 /* Mobile responsive styles */

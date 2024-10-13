@@ -93,7 +93,7 @@
 }
 
 .productListSlider:hover {
-  transform: scale(1.05); /* Slight enlargement on hover */
+  transform: scale(1.05); 
 }
 
 /* Image styling for product */
