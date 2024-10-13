@@ -25,6 +25,11 @@
   display: flex;
 }
 
+.nav-links div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .nav-links{
   display: flex;
   align-items: center;

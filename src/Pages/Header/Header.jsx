@@ -33,7 +33,7 @@ const Header = ({ SearchItem }) => {
               </div>
               
               <nav className="nav-links">
-                  <Link to='/cart'><div><FaShoppingCart /><p> Cart</p></div></Link>
+                  <Link to='/cart'><div><FaShoppingCart /> <p>Cart</p></div></Link>
                   <Link to="/login"><div><FaUserAlt /><p> Login</p></div></Link>       
               </nav>
               
