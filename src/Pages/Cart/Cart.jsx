@@ -17,7 +17,7 @@ const Cart = () => {
   const removeItemFromCart = (id) => {
     const updatedCart = cart.filter(item => item.id !== id);
     setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Update localStorage
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); 
   };
 
   return (
