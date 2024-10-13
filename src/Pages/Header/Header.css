@@ -67,9 +67,6 @@
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  *{
-    font-size: small;
-  }
   .nav-links p{
     display: none;
   }
