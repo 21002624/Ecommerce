@@ -97,7 +97,7 @@ const ProductDetails = () => {
           <p>Product not found.</p>
       }
       <div className='ProductList'>
-        <ProductList cat="groceries" />
+        <ProductList cat={product.category} />
       </div>
     </div>
   );
