@@ -7,6 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Button } from '@mui/material';
 import ProductList from '../Landing/ProductList';
+import toast from 'react-hot-toast';
 
 const ProductDetails = () => {
   const params = useParams();
@@ -41,6 +42,7 @@ const ProductDetails = () => {
       existingProduct.quantity += count;
     } else {
       cart.push({ ...product, quantity: count });
+      toast.success("Added to Cart")
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -49,6 +51,7 @@ const ProductDetails = () => {
     setTimeout(() => {
       setButtonMsg('Add to cart');
     }, 2000);
+    
   };
 
   const increaseCount = () => {

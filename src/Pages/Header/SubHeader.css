@@ -5,34 +5,67 @@ header{
 a{
     text-decoration: none;
 }
-.listImg{
+.listImg{   
     max-width: 30%;
     border-radius: 50%;
 
 }
 .navlinks{
     display: flex;
+    gap: .5rem;
     align-items: center;
-    justify-content: center;
-    height: 90px;
-    gap: 3rem;
+}
+.products{
+    display: flex;
+
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff789; /* Blue background */
+    padding: 0.2rem;
     color: rgb(0, 0, 0); /* Text color */
     text-align: center;
-    border-radius: 5px; /* Rounded corners */
+    border: 1px solid transparent; /* Initial border is transparent */
+    border-radius: 2px; 
     cursor: pointer; /* Pointer cursor on hover */
-    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
-    width: 100%;
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth border and shadow transition */
 }
 
 .button:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Black shadow on hover */
+    border: 1px solid rgb(0, 0, 0); /* Show the border on hover */
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%; 
+    background-color: white; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px; 
+    transition: transform 0.3s ease;
+    padding-top: 5rem;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.close-sidebar {
+    margin-top: 20px;
+    cursor: pointer; /* Pointer cursor for close button */
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+
 
 
 @media (max-width: 768px) {

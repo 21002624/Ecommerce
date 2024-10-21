@@ -1,44 +1,80 @@
-import React from 'react'
-import './SubHeader.css';
-import { BrowserRouter, Link,Router,Routes } from 'react-router-dom';
-import {FaBars } from 'react-icons/fa';
-import beauty from './img/beauty.jpg';
-import fragurances from './img/fragurances.webp';
-import laptop from './img/laptop.jpg';
-import shirts from './img/shirts.jpg';
-import shoes from './img/shoes.jpg';
-import phone from './img/phone.webp';
-import furnitures from './img/furnitures.webp';
+import React, { useState, useRef, useEffect } from 'react';
+// import './SubHeader.css';
+import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+
 const SubHeader = () => {
-  return (
-    <header className='SubHeader'>        
-        <nav className="navlinks">
-         {/* <a> <FaBars/></a> */}
-         {/* <Link>All</Link> */}
-         <Link to="/products">
-            <div class="button">Mobile</div>
-         </Link>
-         <Link to="/beauty">
-            <div class="button">Beauty</div>
-         </Link>
-         <Link to="/fragurances">
-            <div class="button">fragurences</div>
-         </Link>
-         <Link to="/laptop">
-            <div class="button">laptops</div>
-         </Link>
-         <Link to="/shirts">
-            <div class="button">shirts</div>
-         </Link>
-         <Link to="/shoes">
-            <div class="button">shoes</div>
-         </Link>
-         <Link to="/furnitures">
-            <div class="button">furnitures</div>
-         </Link>
-        </nav>
-    </header>
-  )
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const sidebarRef = useRef(null); 
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+
+    const closeSidebar = () => {
+        setIsSidebarOpen(false); 
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                closeSidebar();
+            }
+        };
+
+        if (isSidebarOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isSidebarOpen]);
+
+    return (
+        <header className='SubHeader'>
+            <nav className="navlinks">
+                <div className="button" onClick={toggleSidebar}>
+                    <FaBars /> All
+                </div>
+                <Link to="/">
+                <div className="button">Home</div>
+                </Link>
+                <Link to="/products/smartphones">
+                    <div className="button">Smartphones</div>
+                </Link>
+                <Link to="/products/laptops">
+                    <div className="button">Laptops</div>
+                </Link>
+                <Link to="/products/mens-shirts">
+                    <div className="button">Shirts</div>
+                </Link>
+                <Link to="/products/mens-shoes">
+                    <div className="button">Shoes</div>
+                </Link>
+                <Link to="/products/furniture">
+                    <div className="button">Furnitures</div>
+                </Link>
+            </nav>
+
+            {isSidebarOpen && (
+                <div className="sidebar" ref={sidebarRef}>
+                    <div className="sidebar-content">
+                        <h2>All Items</h2>
+                        {/* Add your sidebar links/items here */}
+                        <Link to="/products/smartphones" onClick={closeSidebar}>Smartphones</Link>
+                        <Link to="/products/laptops" onClick={closeSidebar}>Laptops</Link>
+                        <Link to="/products/mens-shirts" onClick={closeSidebar}>Shirts</Link>
+                        <Link to="/products/mens-shoes" onClick={closeSidebar}>Shoes</Link>
+                        <Link to="/products/furniture" onClick={closeSidebar}>Furnitures</Link>
+                    </div>
+                    <button className="close-sidebar" onClick={closeSidebar}>Close</button>
+                </div>
+            )}
+        </header>
+    );
 }
 
-export default SubHeader
+export default SubHeader;

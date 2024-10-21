@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Pages/Header/Header';
 import SubHeader from './Pages/Header/SubHeader';
@@ -7,23 +7,16 @@ import Trending from './Pages/Trending/Trending';
 import Footer from './Components/Footer/Footer';
 import FooterBottom from './Components/Footer/FooterBottom';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import Products from './Pages/Products/Products';
-import Beauty from './Pages/Products/Beauty';
-import Fragurance from './Pages/Products/Fragurances';
-import Furnitures from './Pages/Products/Furnitures';
-import Laptop from './Pages/Products/Laptops';
-import Shirts from './Pages/Products/Shirts';
-import Shoes from './Pages/Products/Shoes';
-import SignIn from './Pages/Account/SignIn';
-import LogIn from './Pages/Account/LogIn';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import Cart from './Pages/Cart/Cart';
+import { Toaster } from 'react-hot-toast';
 import Search from './Pages/Search/Search';
 
-// This is a functional component now wrapped inside Router context
 function AppContent() {
   const navigate = useNavigate(); // Now safely within Router context
   const [searchItem, setSearchItem] = useState('');
+  const [itemCount, setItemCount] = useState(0); // Declare itemCount state
 
   const SearchItem = () => {  
     const item = document.getElementById('searchItem').value;
@@ -35,11 +28,20 @@ function AppContent() {
     navigate('/search', { state: { searchItem: item } });
   };
 
+  useEffect(() => {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    setItemCount(cartItems.length); // Update item count on load
+  }, []);
+
+  const updateItemCount = (newCount) => {
+    setItemCount(newCount); 
+  };
+
   return (
     <>
       <div className="part1">
-        <Header SearchItem={SearchItem} />
-        <SubHeader />
+        <Header SearchItem={SearchItem} itemCount={itemCount} /> {/* Pass itemCount to Header */}
+        {/* <SubHeader /> */}
       </div>
 
       <div className="part2">
@@ -53,18 +55,10 @@ function AppContent() {
               </>
             }
           />
+          <Route path="/products/:category" element={<Products />} />
           <Route path="/ProductDetails/:id" element={<ProductDetails />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/fragurances" element={<Fragurance />} />
-          <Route path="/beauty" element={<Beauty />} />
-          <Route path="/shirts" element={<Shirts />} />
-          <Route path="/shoes" element={<Shoes />} />
-          <Route path="/laptop" element={<Laptop />} />
-          <Route path="/furnitures" element={<Furnitures />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/cart" element={<Cart updateItemCount={updateItemCount} />} /> {/* Pass updateItemCount */}
         </Routes>
       </div>
 
@@ -72,6 +66,7 @@ function AppContent() {
         <Footer />
         <FooterBottom />
       </div>
+      <Toaster position="top-right" reverseOrder={false} />
     </>
   );
 }

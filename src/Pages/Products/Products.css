@@ -13,7 +13,7 @@ body {
 }
 
 .productBox {
-  flex: 0 0 calc(33.333% - 10px); 
+  width: 250px; /* Fixed width */
   margin-bottom: 20px;
   padding: 16px;
   border: 1px solid #ccc;
@@ -21,12 +21,14 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   box-sizing: border-box;
+  overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 /* Responsive adjustments */
 .productBox img {
-  width: 80%;
-  height: auto;
+  width: 100%; /* Image should take full width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Max height for images */
   border-radius: 4px;
 }
 
@@ -48,16 +50,12 @@ h1 {
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-  .productBox {
-      flex: 0 0 calc(50% - 10px); /* Two items per row on tablets */
+  .grid {
+      justify-content: center; /* Center items on tablets */
   }
 }
 
 @media (max-width: 400px) {
-  .productBox {
-      flex: 0 0 calc(100% - 10px); /* One item per row on mobile */
-  }
-  
   .grid {
       justify-content: center; /* Center items on small screens */
   }

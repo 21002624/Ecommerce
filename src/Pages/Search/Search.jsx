@@ -31,6 +31,14 @@ const Search = () => {
     if (loading) {
         return <div className='loading'> <CircularProgress /></div>;
     }
+    const inr = (price) => {
+        return (price * 84).toFixed(2);
+    };
+
+    const name = (title) => {
+        const words = title.split(' '); // Split the title into words
+        return words.length > 2 ? `${words[0]}...` : title; // Return first word and ellipsis if more than one word
+    };
 
     return (
         <div className='SearchContainer'>
@@ -41,8 +49,8 @@ const Search = () => {
                         <Link to={`/ProductDetails/${product.id}`} key={product.id}>
                         <div className='searchResultList'>
                             <img src={product.thumbnail} alt={product.title} />
-                            <h3>{product.title}</h3>
-                            <p>Price: ${product.price}</p>
+                            <h3>{name(product.title)}</h3>
+                            <p>Price: ₹ {product.price}</p>
                         </div>
                         </Link>
                     ))

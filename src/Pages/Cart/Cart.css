@@ -7,6 +7,7 @@
   }
   .bttn{
     width: 200px;
+    margin-top: .5rem;
   }
   
   .cart-items {
@@ -14,21 +15,23 @@
     flex-direction: column;
     gap: 2rem;
   }
-  
   .cart-item {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
+  } 
   
   .cart-item img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
   
   .cart-item-details {
     display: flex;
     flex-direction: column;
+  }
+  .quantity-controls{
+    margin-bottom: 1rem;
   }
   
   .cart-total {
