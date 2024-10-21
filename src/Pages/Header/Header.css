@@ -1,35 +1,40 @@
-*{
-    color: black;
+* {
+  color: black;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: Arial, sans-serif;
 }
-.bur{
+
+.bur {
   display: none;
 }
-input{
 
+input {
   padding: 10px;
   border: 1px solid #c67f44; 
   border-radius: 5px; 
   font-size: 16px; 
 }
+
 .logo {
   display: flex;
   justify-items: start;
   max-width: 17%;
   gap: 1rem;
 }
+
 .logoDiv {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: .5%;
 }
-.account-address{
+
+.account-address {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,42 +48,49 @@ input{
   display: flex;
 }
 
-.nav-links div{
+.nav-links div {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .5rem;
 }
-.nav-links{
+
+.nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logoImg{
+.logoImg {
   max-width: 100%;
 }
 
-
-.search-bar{
+.search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   width: 50%;
-  gap: 2rem;
+  position: relative; /* Added for positioning the icon */
 }
-.searchBar{
+
+.search-container {
+  width: 100%; /* Make it take the full width */
+}
+
+.searchBar {
   width: 100%;
-  
+  padding-right: 40px; /* Space for the icon */
 }
-.SearchButton{
+
+.SearchButton {
+  position: absolute; /* Positioning within the input */
+  right: 10px; /* Adjust position to be inside the input */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
   font-size: large;
   border: none;
-  width:3rem;
-  height: 3rem;
-  border-radius: 10%;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent; /* Make background transparent */
+  cursor: pointer; /* Change cursor to pointer */
 }
 
 .cartIcon {
@@ -96,7 +108,8 @@ input{
   font-size: 12px;
   font-weight: bold;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
@@ -130,38 +143,49 @@ a{
   border-radius: 5px; /* Rounded corners */
 }
 
-
 @media (max-width: 768px) {
-  .nav-links p{
-    display: none;
+  .nav-links p {
+      display: none;
   }
-  .logoImg{
-    width: 100%;
-    margin-right: .5rem;
+
+  .logoImg {
+      width: 100%;
+      margin-right: .5rem;
   }
-  .account-address{
-    display: none;
+
+  .account-address {
+      display: none;
   }
-  .nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
-  .search-bar{
-    gap: .5rem;
+
+  .search-bar {
+      gap: .5rem;
+      width: 40%;
   }
-  .TextField{
-    max-width: 80%;
-    height: 10%;
+
+  .TextField {
+      max-width: 80%;
+      height: 10%;
   }
-  .header{
-    margin: 0;
-    padding: 2%;
+
+  .header {
+      margin: 0;
+      padding: 2%;
   }
-  .logoImg{
-    display: block;
+  .logo{
+    width: 120px;
   }
-  .bur{
-    display: block;
+
+  .logoImg {
+      display: block;
+  }
+
+  .bur {
+      display: block;
   }
 }

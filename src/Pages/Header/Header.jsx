@@ -69,7 +69,7 @@ const Header = ({ SearchItem, itemCount }) => {
       )}
 
       <div className="search-bar">
-        <input className='searchBar' id="searchItem" label="Search field" type="search" variant="filled" />
+        <input className='searchBar' id="searchItem" label="Search field" type="search" />
         <button onClick={SearchItem} className='SearchButton'><FaSearch /></button>
       </div>
       
